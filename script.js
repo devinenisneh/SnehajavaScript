@@ -1,15 +1,15 @@
-const colorCodes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"];
+const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f"];
 let display = document.getElementById("display");
-let colorDisplay = document.getElementById("color-display");
+let displayCode = document.getElementById("display-code");
 
 const generateColor = () => {
   let colorCode = "#";
   for (let i = 0; i < 6; i++) {
     let randNo = Math.floor(Math.random() * 16);
-    colorCode += colorCodes[randNo];
+    colorCode += arr[randNo];
   }
   display.style.backgroundColor = colorCode;
-  colorDisplay.innerHTML = colorCode;
+  displayCode.innerHTML = colorCode;
 };
 
-generateColor();
+generateColor(); 
